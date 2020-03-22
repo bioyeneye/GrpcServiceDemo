@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceDemo.Protos";
+
+package weather;
+
+
+service Weather {
+  rpc GetWeather (GetWeatherRequest) returns (GetWeatherResponse);
+}
+
+message GetWeatherRequest {
+  string name = 1;
+}
+
+message GetWeatherResponse {
+  string message = 1;
+  string languages = 2;  
+} 
